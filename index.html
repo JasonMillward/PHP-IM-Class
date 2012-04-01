@@ -1,0 +1,78 @@
+<?PHP
+    define('INST_RUNSCRIPT', pathinfo(__FILE__, PATHINFO_BASENAME));
+    define('INST_BASEDIR',	 str_replace(INST_RUNSCRIPT, '', __FILE__));
+    define('INST_RUNFOLDER', 'installer/');
+	define('INST_RUNINSTALL', 'installer.php');
+    if (is_dir(INST_BASEDIR.INST_RUNFOLDER) &&  is_readable(INST_BASEDIR.INST_RUNFOLDER.INST_RUNINSTALL)) {
+        require(INST_BASEDIR.INST_RUNFOLDER.INST_RUNINSTALL); }
+		
+	require_once("inc/functions.php");
+	if (isset($_GET['id'])) {			
+		UpdateSQL();
+		OutputImage();		
+	} elseif (isset($_POST['SigNavURL'])) {
+		$allowed =  array("bf2");
+		if (in_array($_POST['SigNavURL'],$allowed)) {
+			$file = "pages/{$_POST['SigNavURL']}.php";		
+			if (file_exists($file)) {
+				require_once($file);
+			}
+		}
+	} elseif (isset($_POST['Username'])){
+		require_once("pages/output.php");
+	} else {
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<title>Signature selection</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="en">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen, projection">
+<script type="text/javascript">
+function nav(link) {
+	document.getElementById("SigNavURL").value = link;
+	document.forms["SigForm"].submit();
+}
+</script>
+</head><body>
+<div class="centered" style="width: 400px;">
+<div class="containter">
+<h5>Select a signature</h5>
+
+	<form method="post" action="" id="SigForm">
+	<fieldset>
+		<ul class="searchform">
+			<li>
+				<table class="centered">
+					<tr>
+						<td>
+							<img src="img/bf2.png" onclick="nav('bf2');" />
+						</td>
+						<td>
+							<img src="img/gow.png"/>
+						</td>
+						<td>
+							<img src="img/halo3.png"/>
+						</td>
+						<td>
+							<img src="img/rs.png"/>
+						</td>
+						<td>
+							<img src="img/gunz.png"/>
+						</td>
+						<td>
+							<img src="img/wow.png"/>
+						</td>
+					</tr>						
+				</table>
+			</li>			
+		</ul>
+	</fieldset>
+	<input type="hidden" name="SigNavURL" id="SigNavURL">
+	</form>
+</div>
+</div>
+</body></html>
+<?PHP } ?>

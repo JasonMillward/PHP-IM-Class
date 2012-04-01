@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: #333333 repeat scroll 0 0;
+}
+
+body  {
+	font-family: Helvetica, Arial, Sans-serif;
+	color: #393939;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.containter {
+	padding: 120px 20px 20px;
+	-moz-border-radius: 5px;
+}
+
+h5 {
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+fieldset {
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-radius-topleft: 5px;
+	-webkit-border-radius-topright: 5px;
+	background: #1F1F1F url(img/gradient.gif) no-repeat scroll 0 0;
+	border-color: #444444 #313131 #313131;
+	border-style: solid solid solid none;
+	border-width: 2px;
+	padding: 20px;
+}
+
+.searchform {
+	-moz-border-radius: 4px;
+	background:transparent url(img/gradient.gif) repeat-x scroll 0 -40px;
+	margin-left:-5px;
+	padding-left:5px;
+}
+
+li {
+	display: inline;
+}
+
+dl {
+	padding: 5px 0;
+}
+
+dl dt {
+	display: block;
+	width: 57px;
+	clear: left;
+	float: left;
+	padding-right: 20px;
+	text-transform: uppercase;
+	font-size: 0.6em;
+	border-bottom:1px solid #393939;
+}
+
+dl:hover {
+	color: #BBBBBB;
+}
+
+select {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: transparent url(img/gradient.gif) repeat scroll 0 center;
+	border: none;
+	padding: 2px;
+	width: 150px;
+	color:#7A7A7A;
+}
+
+li input {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: transparent url(img/gradient.gif) repeat scroll 0 center;
+	padding: 2px 0;
+	border: medium none;
+	width: 150px;
+	color: #393939;
+}
+
+input.keyword {
+	font-size: 0.8em;
+	padding: 2px 3px;
+}
+
+input.keyword:hover {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-position: 0 50px;
+	border: 1px solid #996800;
+	margin: -2px -2px -1px -1px;
+}
+
+#check {
+	margin-right: auto;
+}
+
+#submit {
+	background-image: url('img/gradient.gif');
+	border: 1px solid #555555;
+	color: #777777;
+	font-size: 0.7em;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+#submit:hover {
+	border: 1px solid #777777;
+	color: #999999;
+}
+
+input.output {
+	font-size: 0.8em;
+	padding: 2px 2px;
+	width: 230px;
+
+}
+
+input.output:hover {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-position: 0 50px;
+	border: 1px solid #996800;
+	margin: -2px -2px -1px -1px;
+}
+
+.imgthumb {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #000000;
+}
